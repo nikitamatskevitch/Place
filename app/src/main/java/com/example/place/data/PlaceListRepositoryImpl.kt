@@ -37,6 +37,12 @@ object PlaceListRepositoryImpl: PlaceListRepository {
         updateList()
     }
 
+    override fun editPlaceItem(placeItem: PlaceItem) {
+        val oldElement = getPlaceItem(placeItem.id)
+        placeList.remove(oldElement)
+        addPlaceItem(placeItem)
+    }
+
     override fun openPlaceItem(placeItem: PlaceItem) {
         TODO("Not yet implemented")
     }

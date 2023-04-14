@@ -13,4 +13,6 @@ interface PlaceListRepository {
     fun getPlaceItem(placeItemId: Int): PlaceItem
 
     fun getPlaceList(): LiveData<List<PlaceItem>>
+
+    fun editPlaceItem(placeItem: PlaceItem)
 }
