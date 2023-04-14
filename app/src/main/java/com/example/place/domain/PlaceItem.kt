@@ -5,6 +5,7 @@ data class PlaceItem(
     val rating: Int,
     val adress: String,
     val description: String,
+    val enabled: Boolean,
     var id: Int = UNDEFINED_ID
 )
 {
