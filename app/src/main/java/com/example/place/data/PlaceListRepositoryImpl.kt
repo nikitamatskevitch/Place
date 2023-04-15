@@ -2,6 +2,7 @@ package com.example.place.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.place.R
 import com.example.place.domain.PlaceItem
 import com.example.place.domain.PlaceListRepository
 
@@ -13,13 +14,13 @@ object PlaceListRepositoryImpl: PlaceListRepository {
     private var autoIncrementId = 0
 
     init{
-        val item = PlaceItem("Ресторан 0", 5, "Минск, Беларусь", "Уютное местечко для двоих", true)
+        val item = PlaceItem(R.drawable.ic_launcher_background,"Ресторан 0", 5, "Минск, Беларусь", "Уютное местечко для двоих", true)
         addPlaceItem(item)
 
-        val item1 = PlaceItem("Парк 1", 5, "Минск, Беларусь", "Романтичная цветочная тропа из васильков", true)
+        val item1 = PlaceItem(R.drawable.ic_launcher_background,"Парк 1", 5, "Минск, Беларусь", "Романтичная цветочная тропа из васильков", true)
         addPlaceItem(item1)
 
-        val item2 = PlaceItem("Кино 2", 4, "Минск, Беларусь", "Задний ряд - лучшее завершение дня", true)
+        val item2 = PlaceItem(R.drawable.ic_launcher_background,"Кино 2", 4, "Минск, Беларусь", "Задний ряд - лучшее завершение дня", true)
         addPlaceItem(item2)
     }
 

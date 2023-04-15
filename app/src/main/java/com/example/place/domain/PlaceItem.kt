@@ -1,6 +1,7 @@
 package com.example.place.domain
 
 data class PlaceItem(
+    val image: Int,
     val name: String,
     val rating: Int,
     val adress: String,
