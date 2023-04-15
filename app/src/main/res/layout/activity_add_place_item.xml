@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    tools:context=".presentation.AddPlaceItemActivity">
+
+    <EditText
+        android:id="@+id/activity_add_place_etPlace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Введите название места.."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- ImageView слева с отступом от вверха и левого угла -->
     <ImageView
-        android:id="@+id/activity_open_place_image"
+        android:id="@+id/activity_add_place_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_launcher_background"
         android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/activity_add_place_etPlace"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp" />
 
@@ -23,19 +33,18 @@
     <!-- Рейтинг TextView -->
 
     <TextView
-        android:id="@+id/activity_open_place_tvName"
+        android:id="@+id/activity_add_place_tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:text="Название места"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/activity_open_place_image"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/activity_add_place_image"
+        app:layout_constraintTop_toTopOf="@id/activity_add_place_image" />
 
     <TextView
-        android:id="@+id/activity_open_place_tvAdress"
+        android:id="@+id/activity_add_place_tvAdress"
         android:layout_width="200dp"
         android:layout_height="16dp"
         android:layout_marginTop="20dp"
@@ -43,11 +52,11 @@
         android:text="Минск, Беларусь"
         android:textSize="13sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toEndOf="@id/activity_open_place_image"
-        app:layout_constraintTop_toTopOf="@id/activity_open_place_tvName" />
+        app:layout_constraintStart_toEndOf="@id/activity_add_place_image"
+        app:layout_constraintTop_toTopOf="@id/activity_add_place_tvName" />
 
     <TextView
-        android:id="@+id/activity_open_place_tvDescription"
+        android:id="@+id/activity_add_place_tvDescription"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -55,25 +64,24 @@
         android:text="Лучшее место, чтобы провести незабываемый вечер..."
         android:textSize="13sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@id/activity_open_place_image"
-        app:layout_constraintTop_toTopOf="@id/activity_open_place_tvAdress" />
+        app:layout_constraintStart_toEndOf="@id/activity_add_place_image"
+        app:layout_constraintTop_toTopOf="@id/activity_add_place_tvAdress" />
 
     <TextView
-        android:id="@+id/activity_open_place_tvRating"
+        android:id="@+id/activity_add_place_tvRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:text="4 ★"
         android:textColor="#FFBF25"
-        android:textStyle="bold"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_place_etPlace" />
 
     <Button
-        android:id="@+id/activity_open_place_buttonSave"
+        android:id="@+id/activity_add_place_buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="сохранить"
